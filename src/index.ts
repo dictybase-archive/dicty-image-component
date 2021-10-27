@@ -1,1 +1,1 @@
-export { default as DictyImage } from './components/DictyImage';
+export { default as DictyImage } from "./components/DictyImage"

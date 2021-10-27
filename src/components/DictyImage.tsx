@@ -1,5 +1,5 @@
-import React from 'react';
-import { DictyImageProps } from '../types';
+import React from "react"
+import { DictyImageProps } from "../types"
 
 const DictyImage = ({
   src,
@@ -14,7 +14,7 @@ const DictyImage = ({
       {nextGenSources?.map((s, i) => (
         <source
           media={`(orientation: ${
-            s.orientation ? s.orientation : 'landscape'
+            s.orientation ? s.orientation : "landscape"
           })`}
           srcSet={s.srcSet}
           type={s.type}
@@ -23,7 +23,7 @@ const DictyImage = ({
       ))}
       <img src={src} alt={alt} className={imgClassName} id={id} />
     </picture>
-  );
-};
+  )
+}
 
-export default DictyImage;
+export default DictyImage
