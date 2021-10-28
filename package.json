@@ -52,6 +52,7 @@
     "react-dom": "^16.14.0",
     "react-styleguidist": "^11.1.7",
     "semantic-release": "^17.4.7",
+    "size-limit": "^6.0.3",
     "ts-loader": "~8.2.0",
     "tsdx": "^0.14.1",
     "webpack": "4"
