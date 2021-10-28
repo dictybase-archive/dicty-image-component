@@ -1,54 +1,36 @@
 {
-  "version": "1.0.0",
+  "name": "dicty-image-component",
+  "version": "11.0.0",
+  "description": "React library with support for modern image formats",
   "license": "BSD-2-Clause",
   "main": "dist/index.js",
+  "module": "dist/dicty-image-component.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
-  "engines": {
-    "node": "14"
-  },
-  "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
-    "styleguide": "FAST_REFRESH=false styleguidist server",
-    "styleguide:build": "FAST_REFRESH=false styleguidist build"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "name": "dicty-image-component",
-  "author": "Ayaan Siddiqui",
-  "private": false,
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dictyBase/dicty-image-component.git"
   },
-  "module": "dist/dicty-image-component.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/dicty-image-component.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/dicty-image-component.esm.js",
-      "limit": "10 KB"
-    }
-  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests --watch",
+    "test-coverage": "tsdx test --passWithNoTests --coverage",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build && husky install",
+    "styleguide": "FAST_REFRESH=false styleguidist server",
+    "styleguide:build": "FAST_REFRESH=false styleguidist build",
+    "semantic-release": "semantic-release"
+  },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "devDependencies": {
+    "@rollup/plugin-image": "^2.1.1",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.1",
@@ -59,21 +41,20 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.2.1",
     "@types/react": "^17.0.33",
-    "docz": "^2.3.1",
     "eslint-plugin-prettier": "^4.0.0",
     "file-loader": "^6.2.0",
     "husky": "7",
     "lint-staged": "^11.1.2",
     "node-notifier": "10.0.0",
     "prettier": "^2.4.1",
-    "react": "^17.0.2",
-    "react-docgen-typescript": "^2.1.1",
+    "react": "^16.14.0",
+    "react-docgen-typescript": "^2.1.0",
     "react-dom": "^16.14.0",
     "react-styleguidist": "^11.1.7",
     "semantic-release": "^17.4.7",
-    "ts-loader": "^9.2.1",
+    "ts-loader": "~8.2.0",
     "tsdx": "^0.14.1",
-    "webpack": "^5.60.0"
+    "webpack": "4"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json}": [
