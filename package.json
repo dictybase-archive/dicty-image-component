@@ -27,7 +27,7 @@
   },
   "name": "dicty-image-component",
   "author": "Ayaan Siddiqui",
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dictyBase/dicty-image-component.git"
