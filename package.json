@@ -17,7 +17,9 @@
     "lint": "tsdx lint src",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "styleguide": "FAST_REFRESH=false styleguidist server",
+    "styleguide:build": "FAST_REFRESH=false styleguidist build"
   },
   "husky": {
     "hooks": {
