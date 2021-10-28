@@ -13,4 +13,4 @@ type DictyImageProps = {
   className?: string
 }
 
-export { PictureSource, DictyImageProps }
+export type { PictureSource, DictyImageProps }

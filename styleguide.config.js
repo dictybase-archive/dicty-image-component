@@ -1,6 +1,6 @@
 module.exports = {
   styleguideDir: "styleguide",
-  title: "dicty-image-component",
+  title: "dicty-components-header-footer",
   ignore: ["**/*.test.{js,jsx,ts,tsx}", "src/styles/**"],
   propsParser: require("react-docgen-typescript").withCustomConfig(
     "./tsconfig.json",
@@ -14,6 +14,14 @@ module.exports = {
           exclude: /node_modules/,
           loader: "ts-loader",
           options: { configFile: "tsconfig.styleguidist.json" },
+        },
+        {
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
+            {
+              loader: "file-loader",
+            },
+          ],
         },
       ],
     },
