@@ -1,6 +1,6 @@
 {
   "name": "dicty-image-component",
-  "version": "11.0.0",
+  "version": "1.1.1",
   "description": "React library with support for modern image formats",
   "license": "BSD-2-Clause",
   "main": "dist/index.js",
