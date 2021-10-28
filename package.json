@@ -19,7 +19,6 @@
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
-  "peerDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -43,18 +42,56 @@
       "limit": "10 KB"
     }
   ],
-  "devDependencies": {
-    "@size-limit/preset-small-lib": "^6.0.3",
-    "@testing-library/dom": "^8.10.1",
-    "@testing-library/react": "^12.1.2",
-    "husky": "^7.0.4",
-    "size-limit": "^6.0.3",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.3.1",
-    "typescript": "^4.4.4"
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
-  "dependencies": {
-    "@types/react": "^17.0.33",
-    "react": "^17.0.2"
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.1",
+    "@semantic-release/github": "^7.2.3",
+    "@semantic-release/npm": "^7.1.3",
+    "@semantic-release/release-notes-generator": "^9.0.3",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "file-loader": "^6.2.0",
+    "husky": "7",
+    "lint-staged": "^11.1.2",
+    "node-notifier": "10.0.0",
+    "prettier": "^2.4.1",
+    "react": "^16.14.0",
+    "react-docgen-typescript": "^2.1.0",
+    "react-dom": "^16.14.0",
+    "react-styleguidist": "^11.1.7",
+    "semantic-release": "^17.4.7",
+    "ts-loader": "^9.2.1",
+    "tsdx": "^0.14.1",
+    "webpack": "4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json}": [
+      "prettier --no-semi --trailing-comma all --jsx-bracket-same-line true --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/"
+    ],
+    "collectCoverageFrom": [
+      "src/components/*.{ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/dist/"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ]
   }
 }
