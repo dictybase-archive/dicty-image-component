@@ -72,7 +72,7 @@
     "semantic-release": "^17.4.7",
     "ts-loader": "^9.2.1",
     "tsdx": "^0.14.1",
-    "webpack": "4"
+    "webpack": "^5.60.0"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json}": [
