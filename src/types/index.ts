@@ -1,7 +1,7 @@
 type PictureSource = {
   srcSet: string
-  type: 'image/webp' | 'image/avif'
-  orientation?: 'landscape' | 'portrait'
+  type: "image/webp" | "image/avif"
+  orientation?: "landscape" | "portrait"
 }
 
 type DictyImageProps = {
@@ -13,4 +13,4 @@ type DictyImageProps = {
   className?: string
 }
 
-export type {PictureSource, DictyImageProps}
+export { PictureSource, DictyImageProps }
