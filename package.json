@@ -59,6 +59,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.2.1",
     "@types/react": "^17.0.33",
+    "docz": "^2.3.1",
     "eslint-plugin-prettier": "^4.0.0",
     "file-loader": "^6.2.0",
     "husky": "7",
