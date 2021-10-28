@@ -17,7 +17,9 @@
     "lint": "tsdx lint src",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "styleguide": "FAST_REFRESH=false styleguidist server",
+    "styleguide:build": "FAST_REFRESH=false styleguidist build"
   },
   "husky": {
     "hooks": {
@@ -64,13 +66,13 @@
     "node-notifier": "10.0.0",
     "prettier": "^2.4.1",
     "react": "^16.14.0",
-    "react-docgen-typescript": "^2.1.0",
+    "react-docgen-typescript": "^2.1.1",
     "react-dom": "^16.14.0",
     "react-styleguidist": "^11.1.7",
     "semantic-release": "^17.4.7",
     "ts-loader": "^9.2.1",
     "tsdx": "^0.14.1",
-    "webpack": "4"
+    "webpack": "^5.60.0"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json}": [
