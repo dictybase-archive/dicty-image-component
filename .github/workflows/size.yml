@@ -9,7 +9,6 @@ jobs:
       - uses: actions/checkout@v1
       - name: install dependencies
         run: /
-          yarn install
           yarn add --dev size-limit @size-limit/preset-app @size-limit/preset-small-lib
       - uses: andresz1/size-limit-action@v1
         with:
